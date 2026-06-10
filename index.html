@@ -1,11 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>A5 Dev Board</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+
+    <style>
+        .poppins-regular {
+            font-family: "Poppins", sans-serif;
+            font-weight: 300;
+            font-style: normal;
+        }
+    </style>
+
+
+
 </head>
-<body>
-    
+
+<body class="p-5 bg-blue-100 poppins-regular">
+    <header>
+        <nav>
+            <div class="navbar bg-base-100 shadow-sm rounded-lg">
+                <div class="flex-none">
+                    <div class="w-10 rounded-full">
+                        <img alt="A5 Dev Board Logo" src="./assets/logo.png" />
+                    </div>
+                </div>
+                <div class="flex-1">
+                    <a class="btn btn-ghost text-xl text-[#00303C]">Dev<span class="font-bold">Board</span></a>
+                </div>
+
+                <div class="flex flex-row gap-4 items-center">
+
+                    <div class="flex flex-row gap-3 items-center bg-blue-50 px-3 py-2 rounded-2xl">
+                        <img src="./assets/checkbox.png" alt="">
+                        <p id="completion-count" class="font-semibold">23</p>
+                    </div>
+
+                    <button class="btn btn-square btn-ghost">
+                        <div class="rounded-full">
+                            <img alt="Theme button"
+                                src="./assets/theme-btn.png" />
+                        </div>
+                    </button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+
+
+
 </body>
+
 </html>
