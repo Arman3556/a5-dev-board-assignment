@@ -21,11 +21,27 @@
             font-weight: 300;
             font-style: normal;
         }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .animate-fadeIn {
+            animation: fadeIn 0.5s ease-out forwards;
+        }
     </style>
 
 </head>
 
-<body class="px-7 py-5 bg-slate-200 poppins-regular">
+<body class="px-7 py-5 poppins-regular animate-fadeIn">
     <header>
         <nav>
             <div class="navbar bg-white shadow-lg rounded-lg px-4">
@@ -68,13 +84,13 @@
                         </div>
                         <div>
                             <h2 class="text-xs text-gray-400">Task Assigned</h2>
-                            <h1 id="task-count" class="text-2xl font-bold">05</h1>
+                            <h1 id="task-count" class="text-2xl font-bold">06</h1>
                         </div>
                     </div>
 
                     <!-- Discover Something New Card -->
-                    <div
-                        class="flex items-center gap-4 bg-gradient-to-r from-blue-600 to-indigo-400 px-6 py-4 rounded-2xl shadow-sm">
+                    <div div onclick="window.location.href='blog.html'"
+                        class="flex items-center gap-4 bg-gradient-to-r from-blue-600 to-indigo-400 px-6 py-4 rounded-2xl cursor-pointer shadow-sm">
                         <div class="rounded-full bg-white/20 p-3">
                             <img src="./assets/board.png" alt="" class="w-10 h-10">
                         </div>
@@ -110,10 +126,10 @@
                         <div class="flex items-center justify-between mt-2">
                             <div>
                                 <p class="text-xs text-gray-400">Deadline</p>
-                                <p class="text-xs font-medium">21 March 2025</p>
+                                <p class="text-xs font-medium">21 March 2026</p>
                             </div>
-                            <button
-                                class="btn btn-sm bg-blue-700 hover:bg-blue-800 text-white border-none rounded-lg px-3 py-1">Completed</button>
+                            <button data-task="Fix Mobile Button Issue"
+                                class="complete-btn btn btn-sm bg-blue-700 hover:bg-blue-800 text-white border-none rounded-lg px-3 py-1">Completed</button>
                         </div>
                     </div>
 
@@ -130,10 +146,10 @@
                         <div class="flex items-center justify-between mt-2">
                             <div>
                                 <p class="text-xs text-gray-400">Deadline</p>
-                                <p class="text-xs font-medium">21 March 2025</p>
+                                <p class="text-xs font-medium">21 March 2026</p>
                             </div>
-                            <button
-                                class="btn btn-sm bg-blue-700 hover:bg-blue-800 text-white border-none rounded-lg px-3 py-1">Completed</button>
+                            <button data-task="Add Dark Mode"
+                                class="complete-btn btn btn-sm bg-blue-700 hover:bg-blue-800 text-white border-none rounded-lg px-3 py-1">Completed</button>
                         </div>
                     </div>
 
@@ -150,10 +166,10 @@
                         <div class="flex items-center justify-between mt-2">
                             <div>
                                 <p class="text-xs text-gray-400">Deadline</p>
-                                <p class="text-xs font-medium">21 March 2025</p>
+                                <p class="text-xs font-medium">21 March 2026</p>
                             </div>
-                            <button
-                                class="btn btn-sm bg-blue-700 hover:bg-blue-800 text-white border-none rounded-lg px-3 py-1">Completed</button>
+                            <button data-task="Optimize Home page"
+                                class="complete-btn btn btn-sm bg-blue-700 hover:bg-blue-800 text-white border-none rounded-lg px-3 py-1">Completed</button>
                         </div>
                     </div>
 
@@ -170,10 +186,10 @@
                         <div class="flex items-center justify-between mt-2">
                             <div>
                                 <p class="text-xs text-gray-400">Deadline</p>
-                                <p class="text-xs font-medium">21 March 2025</p>
+                                <p class="text-xs font-medium">21 March 2026</p>
                             </div>
-                            <button
-                                class="btn btn-sm bg-blue-700 hover:bg-blue-800 text-white border-none rounded-lg px-3 py-1">Completed</button>
+                            <button data-task="Add new emoji"
+                                class="complete-btn btn btn-sm bg-blue-700 hover:bg-blue-800 text-white border-none rounded-lg px-3 py-1">Completed</button>
                         </div>
                     </div>
 
@@ -184,15 +200,16 @@
                         </div>
                         <h2 class="font-medium text-base">Integrate OpenAI API </h2>
                         <div class="bg-white rounded-lg p-3">
-                            <p class="text-[14px] text-wrap text-gray-500">This process integrates the OpenAI API into the application</p>
+                            <p class="text-[14px] text-wrap text-gray-500">This process integrates the OpenAI API into
+                                the application</p>
                         </div>
                         <div class="flex items-center justify-between mt-2">
                             <div>
                                 <p class="text-xs text-gray-400">Deadline</p>
-                                <p class="text-xs font-medium">21 March 2025</p>
+                                <p class="text-xs font-medium">21 March 2026</p>
                             </div>
-                            <button
-                                class="btn btn-sm bg-blue-700 hover:bg-blue-800 text-white border-none rounded-lg px-3 py-1">Completed</button>
+                            <button data-task="Integrate OpenAI API"
+                                class="complete-btn btn btn-sm bg-blue-700 hover:bg-blue-800 text-white border-none rounded-lg px-3 py-1">Completed</button>
                         </div>
                     </div>
 
@@ -203,18 +220,18 @@
                         </div>
                         <h2 class="font-medium text-base">Improve Job searching </h2>
                         <div class="bg-white rounded-lg p-3">
-                            <p class="text-[14px] text-wrap text-gray-500">This process improves the job search functionality</p>
+                            <p class="text-[14px] text-wrap text-gray-500">This process improves the job search
+                                functionality</p>
                         </div>
                         <div class="flex items-center justify-between mt-2">
                             <div>
                                 <p class="text-xs text-gray-400">Deadline</p>
-                                <p class="text-xs font-medium">21 March 2025</p>
+                                <p class="text-xs font-medium">21 March 2026</p>
                             </div>
-                            <button
-                                class="btn btn-sm bg-blue-700 hover:bg-blue-800 text-white border-none rounded-lg px-3 py-1">Completed</button>
+                            <button data-task="Improve Job searching "
+                                class="complete-btn btn btn-sm bg-blue-700 hover:bg-blue-800 text-white border-none rounded-lg px-3 py-1">Completed</button>
                         </div>
                     </div>
-
 
 
                 </section>
@@ -222,7 +239,7 @@
             </div>
 
             <!-- Activity Log -->
-            <section class="max-w-70 bg-white rounded-2xl shadow-sm py-4">
+            <section class="w-56 max-w-60 bg-white rounded-2xl shadow-sm py-4">
 
                 <!-- Header -->
                 <div class="flex flex-col  items-center justify-center mb-4 border-b-1 border-gray-300 border-dashed">
@@ -236,20 +253,9 @@
                     </button>
                 </div>
 
-                <!-- Single tall card wrapping all log items -->
+                <!-- log items -->
                 <div id="activity-log-container" class=" flex flex-col divide-y divide-gray-100">
 
-                    <div class="px-4 py-3">
-                        <p class="text-xs">You have completed the task</p>
-                    </div>
-
-                    <div class="px-4 py-3">
-                        <p class="text-xs ">Soft Pay</p>
-                    </div>
-
-                    <div class="px-4 py-3">
-                        <p class="text-xs">Meta</p>
-                    </div>
 
                 </div>
 
@@ -260,6 +266,8 @@
 
 
 
+
+    <script src="power.js"></script>
 
 </body>
 
